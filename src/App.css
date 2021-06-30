@@ -10,20 +10,20 @@ body {
 
 #aboutme {
   position: relative;
-  width: 600px;
+  width: 40rem;
   display: flex;
-  top: 100px;
+  top: 7rem;
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffffd7;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 2rem;
+  padding-bottom: 2rem;
 }
 
-#aboutmeText {
+#aboutme-text {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 2rem;
   color: black;
 }
 
@@ -32,7 +32,7 @@ body {
   background-image: url("./images/yosemite.jpg");
 
   /* Set a specific height */
-  min-height: 500px;
+  min-height: 30rem;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -41,6 +41,49 @@ body {
   background-size: cover;
 }
 
-#projects {
-  margin-top: 1000px;
+#project-header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 10rem;
+  height: 10rem;
+  background-color: #c2c2c2;
+  letter-spacing: 5px;
+  box-shadow: 0 0 10px;
+  border: 1px solid #bbbbbb;
 }
+
+#projects {
+  display: flex;
+
+    /* The image used */
+    background-image: url("./images/spotlight.jpg");
+
+    /* Set a specific height */
+    min-height: 40rem;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.MuiList-root {
+  width: 20rem;
+  background-color: #d1d1d1;
+  height: 40rem;
+  max-height: 40rem;
+  overflow: auto;
+  color: black;
+  opacity: 92.5%;
+}
+
+#project-img-preview {
+  height: 27rem;
+  width: 32rem;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 10px;
+  margin: auto auto auto 5rem;
+}
+

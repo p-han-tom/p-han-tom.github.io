@@ -12,9 +12,9 @@ function NavigationBar() {
                 {/* <IconButton edge = "start" aria-label="menu" style = {{marginRight: "30px"}}>
                     <MenuIcon/>
                 </IconButton> */}
-                <a href="#aboutme">About me</a>
-                <a>Projects</a>
-                <a>Contact</a>
+                <a href="#aboutme">ABOUT ME</a>
+                <a href="#projects">PROJECTS</a>
+                <a>CONTACT</a>
             </Toolbar>
         </AppBar>
     );
