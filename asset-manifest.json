@@ -1,29 +1,33 @@
 {
   "files": {
-    "main.css": "/static/css/main.5100ea9e.chunk.css",
-    "main.js": "/static/js/main.14d7865f.chunk.js",
-    "main.js.map": "/static/js/main.14d7865f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.308948f4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.308948f4.js.map",
+    "main.css": "/static/css/main.842c3f4d.chunk.css",
+    "main.js": "/static/js/main.a1658725.chunk.js",
+    "main.js.map": "/static/js/main.a1658725.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1c09daef.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1c09daef.js.map",
     "static/css/2.8c49bb0a.chunk.css": "/static/css/2.8c49bb0a.chunk.css",
-    "static/js/2.671054f5.chunk.js": "/static/js/2.671054f5.chunk.js",
-    "static/js/2.671054f5.chunk.js.map": "/static/js/2.671054f5.chunk.js.map",
-    "static/js/3.882dc30f.chunk.js": "/static/js/3.882dc30f.chunk.js",
-    "static/js/3.882dc30f.chunk.js.map": "/static/js/3.882dc30f.chunk.js.map",
+    "static/js/2.2b844555.chunk.js": "/static/js/2.2b844555.chunk.js",
+    "static/js/2.2b844555.chunk.js.map": "/static/js/2.2b844555.chunk.js.map",
+    "static/js/3.e7764f09.chunk.js": "/static/js/3.e7764f09.chunk.js",
+    "static/js/3.e7764f09.chunk.js.map": "/static/js/3.e7764f09.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.8c49bb0a.chunk.css.map": "/static/css/2.8c49bb0a.chunk.css.map",
-    "static/css/main.5100ea9e.chunk.css.map": "/static/css/main.5100ea9e.chunk.css.map",
-    "static/js/2.671054f5.chunk.js.LICENSE.txt": "/static/js/2.671054f5.chunk.js.LICENSE.txt",
-    "static/media/NorthernHackersBanner.ffe0686b.png": "/static/media/NorthernHackersBanner.ffe0686b.png",
-    "static/media/Yearbook1.bc3b0660.jpg": "/static/media/Yearbook1.bc3b0660.jpg",
+    "static/css/main.842c3f4d.chunk.css.map": "/static/css/main.842c3f4d.chunk.css.map",
+    "static/js/2.2b844555.chunk.js.LICENSE.txt": "/static/js/2.2b844555.chunk.js.LICENSE.txt",
+    "static/media/NorthernHackersBanner.png": "/static/media/NorthernHackersBanner.ffe0686b.png",
+    "static/media/ProjectBackground.jpeg": "/static/media/ProjectBackground.04697b4b.jpeg",
+    "static/media/ProjectBackground.jpg": "/static/media/ProjectBackground.34aa3e71.jpg",
+    "static/media/ProjectBackground.png": "/static/media/ProjectBackground.edd636e4.png",
+    "static/media/SkelascentBanner.png": "/static/media/SkelascentBanner.db115ade.png",
+    "static/media/Yearbook1.jpg": "/static/media/Yearbook1.bc3b0660.jpg",
     "static/media/index.css": "/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
-    "static/media/App.css": "/static/media/yosemite.a5078c6d.jpg"
+    "static/media/yosemite.jpg": "/static/media/yosemite.a5078c6d.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.308948f4.js",
+    "static/js/runtime-main.1c09daef.js",
     "static/css/2.8c49bb0a.chunk.css",
-    "static/js/2.671054f5.chunk.js",
-    "static/css/main.5100ea9e.chunk.css",
-    "static/js/main.14d7865f.chunk.js"
+    "static/js/2.2b844555.chunk.js",
+    "static/css/main.842c3f4d.chunk.css",
+    "static/js/main.a1658725.chunk.js"
   ]
 }
