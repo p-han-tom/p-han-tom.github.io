@@ -14,6 +14,7 @@ function NavigationBar() {
                 </IconButton> */}
                 <a href="#aboutme">ABOUT ME</a>
                 <a href="#projects">PROJECTS</a>
+                <a href="#experiences">EXPERIENCE</a>
                 <a>CONTACT</a>
             </Toolbar>
         </AppBar>

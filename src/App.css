@@ -1,47 +1,62 @@
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
   background-color: #e2e2e2;
   color: #3a3a3a;
+  width: 100%;
+  min-width: 1500px;
 }
+
+.MuiIcon-root {
+  padding: 10px;
+}
+
+/* ANCHOR About me */
 
 #aboutme {
-  position: relative;
-  width: 40rem;
   display: flex;
-  top: 7rem;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #ffffffd7;
-  padding: 2rem;
-  padding-bottom: 2rem;
-}
-
-#aboutme-text {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 2rem;
-  color: black;
-}
-
-#parallax {
-  /* The image used */
   background-image: url("./images/yosemite.jpg");
 
-  /* Set a specific height */
-  min-height: 30rem;
-
-  /* Create the parallax scrolling effect */
+  min-height: 100vh;
+  
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#project-header {
+#aboutme-text {
+  width: 30rem;
+  margin: auto auto auto 2rem;
+  color: black;
+  background-color: #e2e2e2de;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.MuiAvatar-root {
+  margin: auto 0 auto auto;
+}
+/* mobile compatibilty*/
+/* @media (max-width: 812px) {
+  #aboutme {
+    display: grid;
+  }
+  
+  #aboutme-text {
+    width: 80%;
+    margin:0 auto auto auto;
+  }
+
+  .MuiAvatar-root {
+    margin: auto auto 0 auto;
+  }
+} */
+
+/* ANCHOR Project List */
+
+#header {
   text-align: center;
   font-size: 3rem;
   line-height: 10rem;
@@ -54,36 +69,85 @@ body {
 
 #projects {
   display: flex;
+  background-image: url("./images/ProjectBackground.jpeg");
 
-    /* The image used */
-    background-image: url("./images/spotlight.jpg");
-
-    /* Set a specific height */
-    min-height: 40rem;
+  min-height: 100vh;
   
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .MuiList-root {
-  width: 20rem;
+  width: 300px;
   background-color: #d1d1d1;
-  height: 40rem;
-  max-height: 40rem;
-  overflow: auto;
+  height: 100vh;
   color: black;
-  opacity: 92.5%;
+  opacity: 0.92;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.projectContainer {
+  width: 300px;
+}
+
+
+#dropdown {
+  background-color: #a5a5a5;
+  position: absolute;
+  left: 300px;
+  margin-top: 50vh;
+  z-index: 1;
+  box-shadow: 0 0 3px;
+  transition: 0.5s;
 }
 
 #project-img-preview {
-  height: 27rem;
-  width: 32rem;
+  display: inline-block;
+  height: 30vw;
+  width: 35vw;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 0 10px;
-  margin: auto auto auto 5rem;
+  margin: auto 2rem auto auto;
 }
+
+#project-desc {
+  display: inline-block;
+  width: 35vw;
+  height: 30vw;
+  margin: auto auto auto 0;
+  background-color: #dadada;
+  border-radius: 20px;
+  box-shadow: 0 0 10px;
+}
+
+/* ANCHOR Experience */
+#experiences {
+  display: inline-block;
+  background-image: url("./images/ExperienceBackground.jpg");
+
+  min-height: 100vh;
+  width: 100%;
+  
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.an-exp {
+  display: inherit;
+  width: 30%;
+  height: 450px;
+  margin: 5px 5px;
+}
+
+.MuiCardMedia-root {
+  background-color: #3a3a3a;
+}
+
 
