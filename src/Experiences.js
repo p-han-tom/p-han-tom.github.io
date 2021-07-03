@@ -1,14 +1,19 @@
 export const experiences = [
     {
         "title": "Co-op position at Accumine Technologies",
-        "desc": "filler"
+        "desc": "filler",
+        "image": "AccumineBanner.png"
     },
     {
         "title": "Competitive programming",
-        "desc": "filler"
+        "desc": "filler",
+        "image": "CompetitiveProgrammingBanner.png"
+
     },
     {
         "title": "Game development hobbyist",
-        "desc": "filler"
+        "desc": "filler",
+        "image": "GameDevelopmentBanner.jpg"
+
     }
 ]

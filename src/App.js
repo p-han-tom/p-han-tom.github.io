@@ -9,6 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import { projects } from './Projects.js';
+import { experiences } from './Experiences.js';
 import Divider from '@material-ui/core/Divider';
 import { createMuiTheme } from '@material-ui/core/styles';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -49,9 +50,20 @@ export default class App extends React.Component {
       projectLinks: [],
       projectListDisplay: true,
       dropdownDirectionIcon: "fas fa-arrow-left",
-      experiencesIndex: 0
+      experiencesIndex: 0,
+      prevScrollPos: window.pageYOffset,
     }
   }
+
+  componentDidMount() {
+    this.generateProjectLinks(0);
+    window.addEventListener("scroll", this.hideNavBar);
+  }
+
+  hideNavBar = () => {
+    document.getElementById("navbar").style.top = (this.state.prevScrollPos > window.pageYOffset) ? "0" : "-70px";
+    this.setState({prevScrollPos: window.pageYOffset});
+  }  
 
   generateProjects = () => {
     return projects.map((project, index) => {
@@ -75,17 +87,35 @@ export default class App extends React.Component {
 
   generateProjectLinks = (index) => {
     let arr = []
-    for (let i = 0; i < projects[this.state.projectIndex].links.length; i++) {
+    for (let i = 0; i < projects[index].links.length; i++) {
       arr.push(<IconButton href={projects[index].links[i]}>
         <Icon className={projects[index].linkIcons[i]}></Icon>
       </IconButton>);
     }
     this.setState({ projectLinks: arr });
-
   }
 
   generateExperiences = () => {
+    return experiences.map((experience, index) => {
+      return (
+        <Card className="an-exp">
+          <CardMedia
+            component="img"
+            alt="Image not available"
+            height="40%"
+            image={require("./images/"+experience.image).default}
+            title={experience.title}
+          />
+          <CardContent>
+            <h1>{experience.title}</h1>
+            <div>{experience.desc}</div>
+          </CardContent>
+          <CardActions>
 
+          </CardActions>
+        </Card>
+      )
+    })
   }
 
   handleProjectListClick = (event, index) => {
@@ -105,7 +135,7 @@ export default class App extends React.Component {
   }
 
   hideProjectList = (event) => {
-    this.setState({dropdownDirectionIcon: (this.state.projectListDisplay) ? "fas fa-arrow-right" : "fas fa-arrow-left"});
+    this.setState({ dropdownDirectionIcon: (this.state.projectListDisplay) ? "fas fa-arrow-right" : "fas fa-arrow-left" });
     document.getElementById("project-list").style.width = (this.state.projectListDisplay) ? "0px" : "300px";
     document.getElementById("dropdown").style.left = (this.state.projectListDisplay) ? "0px" : "300px";
     this.setState({ projectListDisplay: !this.state.projectListDisplay });
@@ -115,7 +145,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="homepage">
-        <NavigationBar />
+        <NavigationBar/>
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
 
         {/* // ANCHOR About me */}
@@ -147,7 +178,7 @@ export default class App extends React.Component {
 
         <div id="projects">
           <IconButton id="dropdown" onClick={(event) => this.hideProjectList(event)}>
-            <Icon className={this.state.dropdownDirectionIcon}></Icon>
+            <Icon style={{ fontSize: "20px" }} className={this.state.dropdownDirectionIcon}></Icon>
           </IconButton>
           <List id="project-list" >
 
@@ -164,8 +195,8 @@ export default class App extends React.Component {
 
           </List>
 
+          {/* display project */}
           <img src={require('./images/' + projects[this.state.projectIndex].image).default} id="project-img-preview"></img>
-
           <Card id="project-desc">
             <CardContent>
               <h1>{projects[this.state.projectIndex].title}</h1>
@@ -184,36 +215,17 @@ export default class App extends React.Component {
         </div>
 
         <div id="experiences">
-          <Card className="an-exp">
-            <CardMedia
-              component="img"
-              alt="Contemplative Reptile"
-              height="40%"
-              image={require("./images/AccumineBanner.png").default}
-              title="Accumine Technologies"
-            />
-            <CardContent>
-              <h1>Accumine Technologies</h1>
-              <div>filler</div>
-            </CardContent>
-            <CardActions>
+          {this.generateExperiences()}
+        </div>
 
-            </CardActions>
-          </Card>
+        {/* ANCHOR CONTACT */}
+        <div id="header">
+          CONTACT ME
+        </div>
 
-          <Card className="an-exp">
-            <CardContent>
-              <h1>{projects[this.state.projectIndex].title}</h1>
-              <div>{projects[this.state.projectIndex].projectDesc}</div>
-            </CardContent>
-            <CardActions>
-
-            </CardActions>
-          </Card>
-
-
-
-
+        <div id = "contact-info">
+          
+          <img src = {require('./images/BabyPicture.jpg').default} id = "baby-picture"></img>
         </div>
 
 

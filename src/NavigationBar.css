@@ -1,5 +1,11 @@
 .MuiAppBar-root {
-    background-color: #4d82cb;
+    position: fixed;
+    height: 70px;
+    display: block;
+    background-color: #0d5fd1;
+    width: 100%;
+    top: 0;
+    transition: top 0.1s;
 }
 
 .MuiAppBar-root a {

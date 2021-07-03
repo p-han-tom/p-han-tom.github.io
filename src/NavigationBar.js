@@ -7,7 +7,7 @@ import './NavigationBar.css';
 
 function NavigationBar() {
     return(
-        <AppBar position = "fixed">
+        <AppBar id = "navbar">
             <Toolbar>
                 {/* <IconButton edge = "start" aria-label="menu" style = {{marginRight: "30px"}}>
                     <MenuIcon/>
@@ -15,7 +15,7 @@ function NavigationBar() {
                 <a href="#aboutme">ABOUT ME</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#experiences">EXPERIENCE</a>
-                <a>CONTACT</a>
+                <a href = "#contact-info">CONTACT</a>
             </Toolbar>
         </AppBar>
     );
