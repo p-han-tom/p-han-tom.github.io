@@ -19,9 +19,6 @@ import { IconButton } from '@material-ui/core/'
 import './App.css';
 import '@fontsource/roboto';
 
-// import {ArrowBackIosIcon, VideogameAssetIcon, }
-
-
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -62,8 +59,8 @@ export default class App extends React.Component {
 
   hideNavBar = () => {
     document.getElementById("navbar").style.top = (this.state.prevScrollPos > window.pageYOffset) ? "0" : "-70px";
-    this.setState({prevScrollPos: window.pageYOffset});
-  }  
+    this.setState({ prevScrollPos: window.pageYOffset });
+  }
 
   generateProjects = () => {
     return projects.map((project, index) => {
@@ -103,7 +100,7 @@ export default class App extends React.Component {
             component="img"
             alt="Image not available"
             height="40%"
-            image={require("./images/"+experience.image).default}
+            image={require("./images/" + experience.image).default}
             title={experience.title}
           />
           <CardContent>
@@ -137,15 +134,15 @@ export default class App extends React.Component {
   hideProjectList = (event) => {
     this.setState({ dropdownDirectionIcon: (this.state.projectListDisplay) ? "fas fa-arrow-right" : "fas fa-arrow-left" });
     document.getElementById("project-list").style.width = (this.state.projectListDisplay) ? "0px" : "300px";
-    document.getElementById("dropdown").style.left = (this.state.projectListDisplay) ? "0px" : "300px";
+    document.getElementById("dropdown").style.left = (this.state.projectListDisplay) ? "0px" : "280px";
     this.setState({ projectListDisplay: !this.state.projectListDisplay });
   }
 
 
   render() {
     return (
-      <div className="homepage">
-        <NavigationBar/>
+      <div className="homepage" onScroll={(event) => { this.hideNavBar(event) }}>
+        <NavigationBar />
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
 
@@ -200,6 +197,8 @@ export default class App extends React.Component {
           <Card id="project-desc">
             <CardContent>
               <h1>{projects[this.state.projectIndex].title}</h1>
+              <div id = "dateline">{projects[this.state.projectIndex].date}</div>
+              <br/>
               <div>{projects[this.state.projectIndex].projectDesc}</div>
             </CardContent>
             <CardActions id="linkArea">
@@ -219,14 +218,24 @@ export default class App extends React.Component {
         </div>
 
         {/* ANCHOR CONTACT */}
-        <div id="header">
+        <div id="header" >
           CONTACT ME
+          <div id="contact-blurb">
+            <Icon className="far fa-envelope"></Icon>
+            <div id="email">
+
+              hantom0127@gmail.com
+
+            </div>
+            <Icon className="fab fa-github"></Icon>
+            <a id="github" href="https://github.com/p-han-tom">
+              p-han-tom
+
+            </a>
+          </div>
         </div>
 
-        <div id = "contact-info">
-          
-          <img src = {require('./images/BabyPicture.jpg').default} id = "baby-picture"></img>
-        </div>
+
 
 
 

@@ -15,7 +15,7 @@ function NavigationBar() {
                 <a href="#aboutme">ABOUT ME</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#experiences">EXPERIENCE</a>
-                <a href = "#contact-info">CONTACT</a>
+                <a href = "#contact-blurb">CONTACT</a>
             </Toolbar>
         </AppBar>
     );

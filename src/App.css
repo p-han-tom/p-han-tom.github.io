@@ -9,10 +9,6 @@ body {
   min-width: 1500px;
 }
 
-.MuiIcon-root {
-  padding: 10px;
-}
-
 /* ANCHOR About me */
 
 #aboutme {
@@ -90,39 +86,66 @@ body {
   overflow: hidden;
 }
 
+.MuiList-root .MuiIcon-root {
+  padding: 10px;
+}
+
+
 .projectContainer {
   width: 300px;
 }
 
+.projectContainer .MuiListItem-root {
+  padding-right: 20px;
+}
 
 #dropdown {
-  background-color: #a5a5a5;
+  color: black;
+  background-color: #2b8eff;
   position: absolute;
-  left: 300px;
+  left: 280px;
   margin-top: 50vh;
   z-index: 1;
   box-shadow: 0 0 3px;
   transition: 0.5s;
+  width: 40px;
+  height: 40px;
 }
 
 #project-img-preview {
   display: inline-block;
-  height: 30vw;
+  height: 35vw;
   width: 35vw;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 0 10px;
   margin: auto 2rem auto auto;
+
 }
 
 #project-desc {
   display: inline-block;
   width: 35vw;
-  height: 30vw;
+  height: 35vw;
   margin: auto auto auto 0;
-  background-color: #dadada;
+  background-color: #f7f7f7;
   border-radius: 20px;
   box-shadow: 0 0 10px;
+  white-space: pre-line;
+}
+
+#project-desc .MuiCardActions-root {
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+
+#project-desc .MuiIcon-root {
+  font-size: 40px;
+}
+
+#dateline {
+  font-style: italic;
+  font-size: 20px;
 }
 
 /* ANCHOR Experience */
@@ -143,8 +166,10 @@ body {
 .an-exp {
   display: inherit;
   width: 30%;
-  height: 450px;
+  height: 500px;
   margin: 5px 5px;
+  background-color: #dadada;
+
 }
 
 .MuiCardMedia-root {
@@ -153,14 +178,24 @@ body {
 
 /* ANCHOR Contact */
 
-#contact-info {
-  display: flex;
-  height: 100vh;
+#contact-blurb {
+  font-size: 25px;
+  letter-spacing: 0;
+  display: block;
 }
 
-#baby-picture {
-  width: 400px;
-  margin: auto auto auto 60vw;
+#contact-blurb .MuiIcon-root, #email, #github {
+  display: inline-flex;
+  
+}
+
+#email, #github {
+  margin-right: 30px;
+}
+
+#contact-blurb .MuiIcon-root {
+  font-size: 25px;
+  padding-right: 5px;
 }
 
 
